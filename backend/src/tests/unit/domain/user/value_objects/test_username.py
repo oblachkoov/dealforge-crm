@@ -4,6 +4,9 @@ from tests.unit.domain.shared.value_objects.username.errors import UnSupportedUs
     InvalidUsernameLengthError, InvalidUsernameFormatError
 from tests.unit.domain.shared.value_objects.username.value_objects import Username
 
+@pytest.fixture
+def test_name():
+    return Username("")
 
 @pytest.mark.parametrize(
     "value", "expected",

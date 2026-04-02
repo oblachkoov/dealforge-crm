@@ -4,6 +4,17 @@ from backend.domain.shared.value_objects.email.errors import InvalidEmailError
 from backend.domain.shared.value_objects.email.value_objects import Email
 
 
+import pytest
+
+from backend.src.backend.domain.shared.value_objects.email.value_objects import Email
+
+
+@pytest.fixture
+def test_email():
+    return Email("testuser@gmail.com")
+
+
+
 @pytest.mark.parametrize(
     "value", "expected",
     [
