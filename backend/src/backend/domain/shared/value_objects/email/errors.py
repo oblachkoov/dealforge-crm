@@ -1,4 +1,5 @@
-from backend.domain.shared.errors import DomainError
+from src.backend.domain.shared.errors import DomainError
+
 
 class EmailError(DomainError):
     """

@@ -1,5 +1,7 @@
 class DomainError(Exception):
     """
-    Базовая ошибка Domain слоя
+    Базовая ошибка domain слоя
     """
 
+class PermissionDeniedError(DomainError):
+    pass
