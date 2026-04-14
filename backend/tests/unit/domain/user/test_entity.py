@@ -3,14 +3,11 @@ from datetime import datetime
 import pytest
 import uuid
 
-from src.backend.domain.shared.errors import DomainError
-from src.backend.domain.shared.value_objects.email.value_object import Email
-from src.backend.domain.shared.value_objects.name.value_object import Name
-from src.backend.domain.user.entity import User
-from src.backend.domain.user.value_objects.username.value_object import Username
-from tests.unit.domain.shared.value_objects.test_email import test_email
-from tests.unit.domain.shared.value_objects.test_name import test_name
-from tests.unit.domain.user.value_objects.test_username import test_username
+from backend.src.backend.domain.shared.errors import DomainError
+from backend.src.backend.domain.shared.value_objects.email.value_object import Email
+from backend.src.backend.domain.shared.value_objects.name.value_object import Name
+from backend.src.backend.domain.user.entity import User
+from backend.src.backend.domain.user.value_objects.username.value_object import Username
 
 
 @pytest.fixture

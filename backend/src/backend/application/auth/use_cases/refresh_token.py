@@ -1,9 +1,9 @@
 from dataclasses import dataclass
 
-from src.backend.application.auth.dtos.refresh_token import RefreshTokenCommand, RefreshTokenResult
-from src.backend.application.auth.errors import InActiveUserError
-from src.backend.application.auth.interfaces.security.token import TokenService
-from src.backend.application.shared.interfaces.uow import UnitOfWork
+from backend.src.backend.application.auth.dtos.refresh_token import RefreshTokenCommand, RefreshTokenResult
+from backend.src.backend.application.auth.errors import InActiveUserError
+from backend.src.backend.application.auth.interfaces.security.token import TokenService
+from backend.src.backend.application.shared.interfaces.uow import UnitOfWork
 
 
 @dataclass

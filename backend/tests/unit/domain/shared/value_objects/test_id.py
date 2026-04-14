@@ -1,7 +1,8 @@
 import pytest
 
-from src.backend.domain.shared.value_objects.id.errors import UnsupportedTypeIdError, NegativeIntIdError
-from src.backend.domain.shared.value_objects.id.value_object import Id
+from backend.src.backend.domain.shared.value_objects.id.errors import UnsupportedTypeIdError, NegativeIntIdError
+from backend.src.backend.domain.shared.value_objects.id.value_object import Id
+
 
 @pytest.mark.parametrize(
     "value, expected",

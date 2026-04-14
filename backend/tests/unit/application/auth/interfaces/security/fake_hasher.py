@@ -1,4 +1,4 @@
-from src.backend.application.auth.interfaces.security.hasher import Hasher
+from backend.src.backend.application.auth.interfaces.security.hasher import Hasher
 
 
 class FakeHasher(Hasher):

@@ -1,13 +1,12 @@
-import time
 import uuid
 from dataclasses import dataclass, field
 from datetime import datetime
 
 from enum import StrEnum
 
-from src.backend.domain.shared.value_objects.email.value_object import Email
-from src.backend.domain.shared.value_objects.name.value_object import Name
-from src.backend.domain.user.value_objects.username.value_object import Username
+from backend.src.backend.domain.shared.value_objects.email.value_object import Email
+from backend.src.backend.domain.shared.value_objects.name.value_object import Name
+from backend.src.backend.domain.user.value_objects.username.value_object import Username
 
 
 class UserRole(StrEnum):

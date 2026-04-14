@@ -1,6 +1,6 @@
-from src.backend.application.shared.interfaces.uow import UnitOfWork
-from src.backend.domain.user.entity import User
-from tests.unit.application.user.fake_repository import FakeUserRepository
+from backend.src.backend.application.shared.interfaces.uow import UnitOfWork
+from backend.src.backend.domain.user.entity import User
+from backend.tests.unit.application.user.fake_repository import FakeUserRepository
 
 
 class FakeUnitOfWork(UnitOfWork):

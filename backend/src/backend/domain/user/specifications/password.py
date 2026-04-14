@@ -1,4 +1,4 @@
-from src.backend.domain.shared.specification import Specification, T
+from backend.src.backend.domain.shared.specification import Specification, T
 
 
 class PasswordLengthSpecification(Specification[str]):
@@ -31,8 +31,3 @@ class PasswordDifferenceSpecification(Specification[tuple[str, str]]):
         old_password, new_password = passwords
         return old_password != new_password
 
-# l = PasswordLengthSpecification()
-# u = PasswordUpperLetterSpecification()
-# d = PasswordDigitSpecification()
-# combo = l & u & d
-# print(combo.is_satisfied_by("Dgjhdfg"))

@@ -1,8 +1,9 @@
 from datetime import datetime, timedelta
 
 from jose import jwt
-from src.backend.application.auth.interfaces.security.token import TokenService
-from src.backend.config import get_settings
+
+from backend.src.backend.application.auth.interfaces.security.token import TokenService
+from backend.src.backend.config import get_settings
 
 settings = get_settings()
 

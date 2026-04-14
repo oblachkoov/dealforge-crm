@@ -1,5 +1,5 @@
-from src.backend.domain.shared.policy import Policy
-from src.backend.domain.user.entity import UserRole, User
+from backend.src.backend.domain.shared.policy import Policy
+from backend.src.backend.domain.user.entity import UserRole, User
 
 
 class CanDeleteUserPolicy(Policy):

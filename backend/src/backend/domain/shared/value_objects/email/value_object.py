@@ -1,7 +1,7 @@
 import re
 from dataclasses import dataclass
 
-from src.backend.domain.shared.value_objects.email.errors import InvalidEmailError
+from backend.src.backend.domain.shared.value_objects.email.errors import InvalidEmailError
 
 
 @dataclass(frozen=True)

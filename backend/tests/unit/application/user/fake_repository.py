@@ -1,7 +1,7 @@
 from uuid import UUID
 
-from src.backend.application.user.repository import UserRepository
-from src.backend.domain.user.entity import User
+from backend.src.backend.application.user.repository import UserRepository
+from backend.src.backend.domain.user.entity import User
 
 
 class FakeUserRepository(UserRepository):

@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-from src.backend.domain.shared.value_objects.id.errors import UnsupportedTypeIdError, NegativeIntIdError
+from backend.src.backend.domain.shared.value_objects.id.errors import UnsupportedTypeIdError, NegativeIntIdError
 
 
 @dataclass(frozen=True)

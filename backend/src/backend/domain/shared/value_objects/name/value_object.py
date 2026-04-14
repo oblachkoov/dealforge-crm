@@ -1,8 +1,8 @@
 import re
 from dataclasses import dataclass
 
-from src.backend.domain.shared.value_objects.name.errors import UnSupportedNameTypeError, InvalidNameLengthError, \
-    InvalidNameFormatError
+from backend.src.backend.domain.shared.value_objects.name.errors import UnSupportedNameTypeError, \
+    InvalidNameLengthError, InvalidNameFormatError
 
 
 @dataclass(frozen=True)

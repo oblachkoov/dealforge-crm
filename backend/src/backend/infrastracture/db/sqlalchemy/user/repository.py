@@ -3,12 +3,12 @@ from uuid import UUID
 from select import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from src.backend.application.user.repository import UserRepository
-from src.backend.domain.shared.value_objects.email.value_object import Email
-from src.backend.domain.shared.value_objects.name.value_object import Name
-from src.backend.domain.user.entity import User
-from src.backend.domain.user.value_objects.username.value_object import Username
-from src.backend.infrastracture.db.sqlalchemy.user.models import UserModel
+from backend.src.backend.application.user.repository import UserRepository
+from backend.src.backend.domain.shared.value_objects.email.value_object import Email
+from backend.src.backend.domain.shared.value_objects.name.value_object import Name
+from backend.src.backend.domain.user.entity import User
+from backend.src.backend.domain.user.value_objects.username.value_object import Username
+from backend.src.backend.infrastracture.db.sqlalchemy.user.models import UserModel
 
 
 def to_model(user: User) -> UserModel:

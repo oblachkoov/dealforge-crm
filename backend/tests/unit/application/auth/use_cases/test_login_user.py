@@ -1,16 +1,12 @@
 import pytest
 
-from src.backend.application.auth.dtos.login_user import LoginUserCommand
-from src.backend.application.auth.errors import AuthUserNotFoundError, InvalidPasswordError, InActiveUserError
-from src.backend.application.auth.use_cases.login_user import LoginUserUseCase
-from src.backend.domain.user.entity import User
-from tests.unit.application.auth.interfaces.security.fake_hasher import FakeHasher
-from tests.unit.application.auth.interfaces.security.fake_token import FakeTokenService
-from tests.unit.application.shared.interfaces.fake_uow import FakeUnitOfWork
-from tests.unit.domain.shared.value_objects.test_email import test_email
-from tests.unit.domain.shared.value_objects.test_name import test_name
-from tests.unit.domain.user.test_entity import valid_user, password_hash, user_id
-from tests.unit.domain.user.value_objects.test_username import test_username
+from backend.src.backend.application.auth.dtos.login_user import LoginUserCommand
+from backend.src.backend.application.auth.errors import AuthUserNotFoundError, InvalidPasswordError, InActiveUserError
+from backend.src.backend.application.auth.use_cases.login_user import LoginUserUseCase
+from backend.src.backend.domain.user.entity import User
+from backend.tests.unit.application.auth.interfaces.security.fake_hasher import FakeHasher
+from backend.tests.unit.application.auth.interfaces.security.fake_token import FakeTokenService
+from backend.tests.unit.application.shared.interfaces.fake_uow import FakeUnitOfWork
 
 
 @pytest.fixture()

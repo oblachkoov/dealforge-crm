@@ -1,7 +1,7 @@
 from sqlalchemy import Column, String, DateTime
 
-from src.backend.infrastracture.db.sqlalchemy.core.mixins import UUIDMixin, TimeStampMixin, ActiveMixin
-from src.backend.infrastracture.db.sqlalchemy.core.models import Base
+from backend.src.backend.infrastracture.db.sqlalchemy.core.mixins import UUIDMixin, TimeStampMixin, ActiveMixin
+from backend.src.backend.infrastracture.db.sqlalchemy.core.models import Base
 
 
 class UserModel(Base, UUIDMixin, TimeStampMixin, ActiveMixin):

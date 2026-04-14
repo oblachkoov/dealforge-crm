@@ -1,8 +1,9 @@
 import pytest
 
-from src.backend.domain.shared.value_objects.name.errors import UnSupportedNameTypeError, InvalidNameLengthError, \
-    InvalidNameFormatError
-from src.backend.domain.shared.value_objects.name.value_object import Name
+from backend.src.backend.domain.shared.value_objects.name.errors import UnSupportedNameTypeError, \
+    InvalidNameLengthError, InvalidNameFormatError
+from backend.src.backend.domain.shared.value_objects.name.value_object import Name
+
 
 @pytest.fixture
 def test_name():

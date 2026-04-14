@@ -1,11 +1,11 @@
 from dataclasses import dataclass
 
-from src.backend.application.auth.dtos.change_password import ChangePasswordCommand
-from src.backend.application.auth.errors import AuthUserNotFoundError, InvalidPasswordError, WeakPasswordError, \
-    SamePasswordError
-from src.backend.application.auth.interfaces.security.hasher import Hasher
-from src.backend.application.shared.interfaces.uow import UnitOfWork
-from src.backend.domain.shared.specification import Specification
+from backend.src.backend.application.auth.dtos.change_password import ChangePasswordCommand
+from backend.src.backend.application.auth.errors import WeakPasswordError, SamePasswordError, AuthUserNotFoundError, \
+    InvalidPasswordError
+from backend.src.backend.application.auth.interfaces.security.hasher import Hasher
+from backend.src.backend.application.shared.interfaces.uow import UnitOfWork
+from backend.src.backend.domain.shared.specification import Specification
 
 
 @dataclass

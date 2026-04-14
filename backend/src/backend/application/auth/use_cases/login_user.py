@@ -1,8 +1,8 @@
-from src.backend.application.auth.dtos.login_user import LoginUserCommand, LoginUserResult
-from src.backend.application.auth.errors import AuthUserNotFoundError, InvalidPasswordError, InActiveUserError
-from src.backend.application.auth.interfaces.security.hasher import Hasher
-from src.backend.application.auth.interfaces.security.token import TokenService
-from src.backend.application.shared.interfaces.uow import UnitOfWork
+from backend.src.backend.application.auth.dtos.login_user import LoginUserCommand, LoginUserResult
+from backend.src.backend.application.auth.errors import AuthUserNotFoundError, InvalidPasswordError, InActiveUserError
+from backend.src.backend.application.auth.interfaces.security.hasher import Hasher
+from backend.src.backend.application.auth.interfaces.security.token import TokenService
+from backend.src.backend.application.shared.interfaces.uow import UnitOfWork
 
 
 class LoginUserUseCase:

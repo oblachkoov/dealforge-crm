@@ -1,7 +1,8 @@
 import re
 from dataclasses import dataclass
 
-from src.backend.domain.user.value_objects.username.errors import InvalidUsernameLengthError, InvalidUsernameFormatError, UnSupportedUsernameTypeError
+from backend.src.backend.domain.user.value_objects.username.errors import UnSupportedUsernameTypeError, \
+    InvalidUsernameLengthError, InvalidUsernameFormatError
 
 
 @dataclass(frozen=True)

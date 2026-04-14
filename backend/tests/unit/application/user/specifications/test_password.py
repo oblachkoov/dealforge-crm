@@ -1,6 +1,6 @@
 import pytest
 
-from src.backend.domain.user.specifications.password import PasswordLengthSpecification, \
+from backend.src.backend.domain.user.specifications.password import PasswordLengthSpecification, \
     PasswordUpperLetterSpecification, PasswordLowerLetterSpecification, PasswordDigitSpecification, \
     PasswordSpecialCharacterSpecification, PasswordDifferenceSpecification
 

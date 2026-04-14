@@ -1,9 +1,9 @@
 from dataclasses import dataclass
 
-from src.backend.application.auth.dtos.update_me import UpdateMeCommand
-from src.backend.application.auth.errors import EmailAlreadyExistsError
-from src.backend.application.shared.interfaces.uow import UnitOfWork
-from src.backend.domain.user.entity import User
+from backend.src.backend.application.auth.dtos.update_me import UpdateMeCommand
+from backend.src.backend.application.auth.errors import EmailAlreadyExistsError
+from backend.src.backend.application.shared.interfaces.uow import UnitOfWork
+from backend.src.backend.domain.user.entity import User
 
 
 @dataclass

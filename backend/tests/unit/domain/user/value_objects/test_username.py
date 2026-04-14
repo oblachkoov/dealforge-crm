@@ -1,8 +1,8 @@
 import pytest
 
-from src.backend.domain.user.value_objects.username.errors import UnSupportedUsernameTypeError, \
+from backend.src.backend.domain.user.value_objects.username.errors import UnSupportedUsernameTypeError, \
     InvalidUsernameLengthError, InvalidUsernameFormatError
-from src.backend.domain.user.value_objects.username.value_object import Username
+from backend.src.backend.domain.user.value_objects.username.value_object import Username
 
 
 @pytest.fixture

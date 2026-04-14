@@ -1,13 +1,13 @@
 import uuid
 from dataclasses import dataclass
 
-from src.backend.application.auth.errors import EmailAlreadyExistsError, WeakPasswordError
-from src.backend.application.auth.interfaces.security.hasher import Hasher
-from src.backend.application.shared.interfaces.uow import UnitOfWork
-from src.backend.application.user.dtos.create_user import CreateUserCommand, CreateUserResult
-from src.backend.domain.shared.specification import Specification
-from src.backend.domain.user.entity import User
-from src.backend.domain.user.policies.can_create import CanCreateUserPolicy
+from backend.src.backend.application.auth.errors import EmailAlreadyExistsError, WeakPasswordError
+from backend.src.backend.application.auth.interfaces.security.hasher import Hasher
+from backend.src.backend.application.shared.interfaces.uow import UnitOfWork
+from backend.src.backend.application.user.dtos.create_user import CreateUserCommand, CreateUserResult
+from backend.src.backend.domain.shared.specification import Specification
+from backend.src.backend.domain.user.entity import User
+from backend.src.backend.domain.user.policies.can_create import CanCreateUserPolicy
 
 
 @dataclass

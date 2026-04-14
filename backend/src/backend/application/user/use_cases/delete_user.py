@@ -1,10 +1,10 @@
 from dataclasses import dataclass
 
-from src.backend.application.shared.interfaces.uow import UnitOfWork
-from src.backend.application.user.dtos.delete_user import DeleteUserCommand
-from src.backend.application.user.errors import UserNotFoundError
-from src.backend.domain.user.entity import User
-from src.backend.domain.user.policies.can_delete import CanDeleteUserPolicy
+from backend.src.backend.application.shared.interfaces.uow import UnitOfWork
+from backend.src.backend.application.user.dtos.delete_user import DeleteUserCommand
+from backend.src.backend.application.user.errors import UserNotFoundError
+from backend.src.backend.domain.user.entity import User
+from backend.src.backend.domain.user.policies.can_delete import CanDeleteUserPolicy
 
 
 @dataclass

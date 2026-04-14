@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from src.backend.domain.shared.errors import PermissionDeniedError
+from backend.src.backend.domain.shared.errors import PermissionDeniedError
 
 
 class Policy(ABC):

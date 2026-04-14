@@ -1,7 +1,7 @@
 import pytest
 
-from src.backend.domain.shared.value_objects.email.errors import InvalidEmailError
-from src.backend.domain.shared.value_objects.email.value_object import Email
+from backend.src.backend.domain.shared.value_objects.email.errors import InvalidEmailError
+from backend.src.backend.domain.shared.value_objects.email.value_object import Email
 
 
 @pytest.fixture
@@ -11,16 +11,16 @@ def test_email():
 @pytest.mark.parametrize(
     "value, expected",
     [
-        ("test.user@gmail.com", "test.user@gmail.com"),
-        ("example123@yahoo.com", "example123@yahoo.com"),
-        ("user_name@outlook.com", "user_name@outlook.com"),
-        ("my-email@mail.ru", "my-email@mail.ru"),
-        ("hello.world@company.org", "hello.world@company.org"),
-        ("user2025@test.net", "user2025@test.net"),
-        ("first.last@domain.co", "first.last@domain.co"),
-        ("simple@mail.com", "simple@mail.com"),
-        ("name.surname123@service.io", "name.surname123@service.io"),
-        ("x_y-z@sub.domain.com", "x_y-z@sub.domain.com"),
+        ("alpha.user@gmail.com", "alpha.user@gmail.com"),
+        ("coolguy123@yahoo.com", "coolguy123@yahoo.com"),
+        ("name_test@outlook.com", "name_test@outlook.com"),
+        ("email-test@mail.ru", "email-test@mail.ru"),
+        ("hello.dev@company.org", "hello.dev@company.org"),
+        ("user2026@test.net", "user2026@test.net"),
+        ("first_name@domain.co", "first_name@domain.co"),
+        ("simpleuser@mail.com", "simpleuser@mail.com"),
+        ("coder.girl123@service.io", "coder.girl123@service.io"),
+        ("abc_xyz@sub.domain.com", "abc_xyz@sub.domain.com"),
     ]
 )
 def test_valid_email(value, expected):

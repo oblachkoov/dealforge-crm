@@ -2,8 +2,7 @@ from ast import Name
 
 import pytest
 
-from backend.domain.shared.value_objects.name.errors import NameTypeError, InvalidNameLengthError, \
-    InvalidNameFormatError
+from backend.src.backend.domain.shared.value_objects.name.errors import InvalidNameLengthError, InvalidNameFormatError
 
 
 @pytest.mark.parametrize(

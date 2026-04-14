@@ -1,7 +1,7 @@
 import pytest
 
-from src.backend.application.auth.dtos.change_password import ChangePasswordCommand
-from tests.unit.domain.user.test_entity import user_id
+# from src.backend.application.auth.dtos.change_password import ChangePasswordCommand
+# from tests.unit.domain.user.test_entity import user_id
 
 
 # @pytest.fixture

@@ -1,7 +1,7 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from src.backend.application.shared.interfaces.uow import UnitOfWork
-from src.backend.infrastracture.db.sqlalchemy.user.repository import SqlAlchemyUserRepository
+from backend.src.backend.application.shared.interfaces.uow import UnitOfWork
+from backend.src.backend.infrastracture.db.sqlalchemy.user.repository import SqlAlchemyUserRepository
 
 
 class SqlAlchemyUnitOfWork(UnitOfWork):

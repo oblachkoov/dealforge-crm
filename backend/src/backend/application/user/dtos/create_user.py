@@ -2,7 +2,7 @@ from uuid import UUID
 
 from pydantic import BaseModel
 
-from src.backend.domain.user.entity import UserRole
+from backend.src.backend.domain.user.entity import UserRole
 
 
 class CreateUserCommand(BaseModel):

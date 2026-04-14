@@ -1,4 +1,4 @@
-from src.backend.application.auth.interfaces.security.token import TokenService
+from backend.src.backend.application.auth.interfaces.security.token import TokenService
 
 
 class FakeTokenService(TokenService):

@@ -1,10 +1,10 @@
 from dataclasses import dataclass
 
-from src.backend.application.auth.dtos.get_me import GetMeCommand, GetMeResult
-from src.backend.application.auth.errors import InActiveUserError
-from src.backend.application.auth.interfaces.security.token import TokenService
-from src.backend.application.shared.interfaces.uow import UnitOfWork
-from src.backend.domain.user.entity import User
+from backend.src.backend.application.auth.dtos.get_me import GetMeCommand
+from backend.src.backend.application.auth.errors import InActiveUserError
+from backend.src.backend.application.auth.interfaces.security.token import TokenService
+from backend.src.backend.application.shared.interfaces.uow import UnitOfWork
+from backend.src.backend.domain.user.entity import User
 
 
 @dataclass

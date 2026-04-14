@@ -1,8 +1,9 @@
 import re
 from dataclasses import dataclass
 
-from backend.domain.shared.value_objects.name.errors import NameTypeError, InvalidNameLengthError, \
-    InvalidNameFormatError
+
+from backend.src.backend.domain.shared.value_objects.name.errors import InvalidNameLengthError, InvalidNameFormatError
+from backend.src.backend.domain.user.value_objects.username.errors import UnSupportedUsernameTypeError
 
 
 @dataclass(frozen=True)
@@ -15,7 +16,7 @@ class Name:
     def __post_init__(self):
         #Проверка типа данных
         if not isinstance(self.value, str):
-            raise NameTypeError
+            raise UnSupportedUsernameTypeError()
 
         #Проверка длины
         if len(self.value) < 2 or len(self.value) > 255:

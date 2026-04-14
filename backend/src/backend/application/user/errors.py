@@ -1,4 +1,4 @@
-from src.backend.application.shared.errors import ApplicationError
+from backend.src.backend.application.shared.errors import ApplicationError
 
 
 class UserError(ApplicationError):

@@ -1,4 +1,4 @@
-from src.backend.domain.shared.errors import DomainError
+from backend.src.backend.domain.shared.errors import DomainError
 
 
 class IdError(DomainError):
