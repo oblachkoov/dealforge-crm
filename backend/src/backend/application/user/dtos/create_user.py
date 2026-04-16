@@ -16,3 +16,8 @@ class CreateUserCommand(BaseModel):
 
 class CreateUserResult(BaseModel):
     user_id: UUID
+
+class UpdateUserCommand(BaseModel):
+    first_name: str
+    last_name: str
+    username: str

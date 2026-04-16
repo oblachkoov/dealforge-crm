@@ -1,8 +1,9 @@
 from fastapi import APIRouter, Depends
 from fastapi_utils.cbv import cbv
+from sqlalchemy import Update
 from starlette import status
 
-from backend.src.backend.application.user.dtos.create_user import CreateUserResult, CreateUserCommand
+from backend.src.backend.application.user.dtos.create_user import CreateUserResult, CreateUserCommand, UpdateUserCommand
 from backend.src.backend.application.user.use_cases.create_user import CreateUserUseCase
 from backend.src.backend.domain.shared.specification import Specification
 from backend.src.backend.domain.user.entity import User
@@ -42,4 +43,17 @@ class UserRouter:
             cmd=request
         )
         return response
+
+    @router.put(
+        "/",
+        name="Обновление пользователя",
+        status_code=status.HTTP_200_OK,
+        response_model=Update,
+    )
+    async def update_user(
+            self,
+            request: UpdateUserCommand,
+    ):
+        pass
+
 

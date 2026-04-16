@@ -4,7 +4,7 @@ from dataclasses import dataclass
 from backend.src.backend.application.auth.errors import EmailAlreadyExistsError, WeakPasswordError
 from backend.src.backend.application.auth.interfaces.security.hasher import Hasher
 from backend.src.backend.application.shared.interfaces.uow import UnitOfWork
-from backend.src.backend.application.user.dtos.create_user import CreateUserCommand, CreateUserResult
+from backend.src.backend.application.user.dtos.create_user import CreateUserCommand, CreateUserResult, UpdateUserCommand
 from backend.src.backend.domain.shared.specification import Specification
 from backend.src.backend.domain.user.entity import User
 from backend.src.backend.domain.user.policies.can_create import CanCreateUserPolicy
@@ -50,3 +50,5 @@ class CreateUserUseCase:
             await self.uow.commit()
 
             return CreateUserResult(user_id=user_id)
+
+
