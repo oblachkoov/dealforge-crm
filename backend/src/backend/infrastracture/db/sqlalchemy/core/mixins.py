@@ -2,10 +2,11 @@ import uuid
 from datetime import datetime
 
 from sqlalchemy import Column, DateTime, Boolean, BigInteger
+from sqlalchemy.dialects.postgresql.base import UUID
 
 
 class UUIDMixin:
-    id= Column(uuid.UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    id= Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
 
 class IntIdMixin:
     id = Column(BigInteger, primary_key=True, autoincrement=True)

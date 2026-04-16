@@ -1,6 +1,7 @@
 from uuid import UUID
 
-from select import select
+from ansible_collections.community.general.plugins.modules.one_vm import resume_vm
+from sqlalchemy import select, exists
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from backend.src.backend.application.user.repository import UserRepository
@@ -23,6 +24,7 @@ def to_model(user: User) -> UserModel:
         created_at=user.created_at,
         updated_at =user.updated_at,
         is_active=user.is_active,
+        role=user.role,
     )
 
 def to_entity(user: UserModel) -> User:
@@ -37,6 +39,7 @@ def to_entity(user: UserModel) -> User:
         created_at=user.created_at,
         updated_at=user.updated_at,
         is_active=user.is_active,
+        role=user.role
     )
 
 
@@ -83,3 +86,15 @@ class SqlAlchemyUserRepository(UserRepository):
         self.session.add(user)
         await self.session.flush()
 
+
+    async def exists_username(self, username: str, user_id: UUID = None) -> bool:
+        stmt = select(exists().where(UserModel.username == username))
+        result = await self.session.execute(stmt)
+        return result.scalar()
+
+    async def exists_email(self, email: str, user_id: UUID = None) -> bool:
+        stmt = select(exists().where(UserModel.email == email))
+        if user_id:
+            stmt = stmt.where(UserModel.id != user_id)
+        result = await self.session.execute(stmt)
+        return result.scalar()
