@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 
+from backend.src.backend.application import user
 from backend.src.backend.application.auth.dtos.change_password import ChangePasswordCommand
 from backend.src.backend.application.auth.errors import WeakPasswordError, SamePasswordError, AuthUserNotFoundError, \
     InvalidPasswordError

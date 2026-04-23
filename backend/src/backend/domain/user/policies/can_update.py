@@ -2,7 +2,7 @@ from backend.src.backend.domain.shared.policy import Policy
 from backend.src.backend.domain.user.entity import UserRole, User
 
 
-class CanDeleteUserPolicy(Policy):
+class CanUpdateUserPolicy(Policy):
     ALLOWED_ROLES = {UserRole.admin, UserRole.director}
 
     def __init__(
@@ -22,4 +22,4 @@ class CanDeleteUserPolicy(Policy):
         )
 
     def _error_message(self) -> str:
-        return f"You don't have permission to delete user with role: {self._role}"
+        return f"You don't have permission to update user with role: {self._role}"
