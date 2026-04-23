@@ -10,7 +10,7 @@ from backend.src.backend.domain.user.specifications.password import PasswordLeng
 from backend.src.backend.infrastracture.db.sqlalchemy.core.uow import SqlAlchemyUnitOfWork
 from backend.src.backend.infrastracture.security.argon2.hasher import Argon2Hasher
 from backend.src.backend.infrastracture.security.jose.token import JWTTokenService
-from backend.src.backend.presentation.api.v1.core.dependencies import get_ouw
+from backend.src.backend.presentation.api.v1.core.dependencies import get_ouw, get_uow
 
 schema = HTTPBearer()
 

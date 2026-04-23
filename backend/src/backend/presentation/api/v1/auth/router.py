@@ -19,7 +19,8 @@ from backend.src.backend.domain.user.specifications.password import PasswordDiff
 from backend.src.backend.infrastracture.db.sqlalchemy.core.uow import SqlAlchemyUnitOfWork
 from backend.src.backend.infrastracture.security.argon2.hasher import Argon2Hasher
 from backend.src.backend.infrastracture.security.jose.token import JWTTokenService
-from backend.src.backend.presentation.api.v1.auth.dependencies import get_hasher, get_token_service, get_current_user
+from backend.src.backend.presentation.api.v1.auth.dependencies import get_hasher, get_token_service, get_current_user, \
+    get_password_spec, get_password_diff_spec
 
 router = APIRouter(
     prefix="/auth",

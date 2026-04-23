@@ -7,6 +7,7 @@ from backend.src.backend.application.funnel.use_cases.get_funnel import GetFunne
 from backend.src.backend.domain.user.entity import User
 from backend.src.backend.infrastracture.db.sqlalchemy.core.uow import SqlAlchemyUnitOfWork
 from backend.src.backend.presentation.api.v1.auth.dependencies import get_current_user
+from backend.src.backend.presentation.api.v1.core.dependencies import get_uow
 
 
 async def get_funnel(

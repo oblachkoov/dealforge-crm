@@ -4,7 +4,7 @@ from uuid import UUID
 from backend.src.backend.application.auth.errors import EmailAlreadyExistsError
 from backend.src.backend.application.shared.interfaces.uow import UnitOfWork
 from backend.src.backend.application.user.dtos.create_user import UpdateUserCommand
-from backend.src.backend.application.user.errors import UserNotFoundError
+from backend.src.backend.application.user.errors import UserNotFoundError, UsernameAlreadyExistsError
 from backend.src.backend.domain.user.entity import User
 from backend.src.backend.domain.user.policies.can_update import CanUpdateUserPolicy
 

@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from jose import JWTError
 
-from backend.src.backend.application.auth.errors import InvalidPasswordError, NotAuthorizedError
+from backend.src.backend.application.auth.errors import  NotAuthorizedError
 from backend.src.backend.application.shared.errors import BadRequestError, ConflictError, NotFoundError
 from backend.src.backend.presentation.api.v1.auth.router import router as auth_router
 from backend.src.backend.presentation.api.v1.core.handlers.auth import not_authorized_exception_handler, token_exception_handler

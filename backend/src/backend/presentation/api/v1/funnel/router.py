@@ -8,6 +8,7 @@ from backend.src.backend.domain.funnel.entity import Funnel
 from backend.src.backend.domain.user.entity import User
 from backend.src.backend.infrastracture.db.sqlalchemy.core.uow import SqlAlchemyUnitOfWork
 from backend.src.backend.presentation.api.v1.auth.dependencies import get_current_user
+from backend.src.backend.presentation.api.v1.core.dependencies import get_uow
 from backend.src.backend.presentation.api.v1.funnel.dependencies import get_funnel
 
 router= APIRouter(

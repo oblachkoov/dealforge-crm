@@ -1,15 +1,22 @@
+from uuid import UUID
+
 from fastapi import APIRouter, Depends
 from fastapi_utils.cbv import cbv
-from sqlalchemy import Update
 from starlette import status
 
 from backend.src.backend.application.user.dtos.create_user import CreateUserResult, CreateUserCommand, UpdateUserCommand
+from backend.src.backend.application.user.dtos.delete_user import DeleteUserCommand
+from backend.src.backend.application.user.dtos.get_user_by_id import GetUserByIdResult, GetUserByIdCommand
 from backend.src.backend.application.user.use_cases.create_user import CreateUserUseCase
+from backend.src.backend.application.user.use_cases.delete_user import DeleteUserUseCase
+from backend.src.backend.application.user.use_cases.get_user_by_id import GetUserByIdUseCase
+from backend.src.backend.application.user.use_cases.update_user import UpdateUserUseCase
 from backend.src.backend.domain.shared.specification import Specification
 from backend.src.backend.domain.user.entity import User
 from backend.src.backend.infrastracture.db.sqlalchemy.core.uow import SqlAlchemyUnitOfWork
 from backend.src.backend.infrastracture.security.argon2.hasher import Argon2Hasher
 from backend.src.backend.presentation.api.v1.auth.dependencies import get_current_user, get_hasher, get_password_spec
+from backend.src.backend.presentation.api.v1.core.dependencies import get_uow
 
 router= APIRouter(
     prefix="/users",
@@ -18,7 +25,7 @@ router= APIRouter(
 
 @cbv(router)
 class UserRouter:
-    uow: SqlAlchemyUnitOfWork = Depends(get_current_user)
+    uow: SqlAlchemyUnitOfWork = Depends(get_uow)
     user: User = Depends(get_current_user)
 
     @router.post(
@@ -44,16 +51,57 @@ class UserRouter:
         )
         return response
 
-    @router.put(
-        "/",
-        name="Обновление пользователя",
+
+    @router.delete(
+        "/{user_id}",
+        name="Удаление пользователя",
         status_code=status.HTTP_200_OK,
-        response_model=Update,
+    )
+    async def delete_user(
+            self,
+            user_id: UUID,
+    ):
+        uc = DeleteUserUseCase(
+            uow=self.uow,
+            actor=self.user
+        )
+        cmd = DeleteUserCommand(user_id=user_id)
+        await uc.execute(cmd=cmd)
+
+
+    @router.get(
+        "/{user_id}",
+        name="Получение пользователя по ИД",
+        status_code=status.HTTP_200_OK,
+        response_model=GetUserByIdResult
+    )
+    async def get_user_by_id(
+            self,
+            user_id: UUID
+    ):
+        uc = GetUserByIdUseCase(
+            uow=self.uow,
+        )
+        cmd = GetUserByIdCommand(user_id=user_id)
+        response = await uc.execute(cmd=cmd)
+        return response
+
+
+    @router.patch(
+        "/{user_id}",
+        name="Изменение пользователя",
+        status_code=status.HTTP_200_OK,
     )
     async def update_user(
             self,
+            user_id: UUID,
             request: UpdateUserCommand,
     ):
-        pass
-
-
+        uc = UpdateUserUseCase(
+            uow=self.uow,
+            actor=self.user
+        )
+        response = await uc.execute(
+            user_id=user_id,
+            cmd=request
+        )

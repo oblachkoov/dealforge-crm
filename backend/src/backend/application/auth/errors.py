@@ -24,3 +24,6 @@ class SamePasswordError(AuthError):
 class EmailAlreadyExistsError(AuthError):
     pass
 
+
+class NotAuthorizedError(AuthError):
+    pass
