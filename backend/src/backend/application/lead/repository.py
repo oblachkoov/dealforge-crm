@@ -1,7 +1,7 @@
 from typing import Protocol
 from uuid import UUID
 
-from src.backend.domain.lead.entity import LeadCustomField
+from backend.src.backend.domain.lead.entity import LeadCustomField
 
 
 class LeadCustomFieldRepository(Protocol):

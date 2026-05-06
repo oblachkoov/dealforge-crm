@@ -1,11 +1,10 @@
 from dataclasses import dataclass
 
-from src.backend.application.lead.dtos.custom_fields.create_customa_fields import CreateCustomFieldCommand
-from src.backend.application.shared.interfaces.uow import UnitOfWork
-from src.backend.domain.lead.entity import LeadCustomField
-from src.backend.domain.lead.policies.can_create_custom_field import CanCreateCustomFieldPolicy
-from src.backend.domain.lead.value_objects.field_type.value_object import FieldType
-from src.backend.domain.user.entity import User
+from backend.src.backend.application.lead.dtos.custom_fields.create_customa_fields import CreateCustomFieldCommand
+from backend.src.backend.application.shared.interfaces.uow import UnitOfWork
+from backend.src.backend.domain.lead.entity import LeadCustomField
+from backend.src.backend.domain.lead.policies.can_create_custom_field import CanCreateCustomFieldPolicy
+from backend.src.backend.domain.user.entity import User
 
 
 @dataclass

@@ -14,7 +14,7 @@ from backend.src.backend.presentation.api.v1.core.handlers.not_found import not_
 
 from backend.src.backend.presentation.api.v1.auth.router import router as auth_router
 from backend.src.backend.presentation.api.v1.user.router import router as user_router
-from backend.src.backend.presentation.api.v1.funnel.routers import router funnel
+from backend.src.backend.presentation.api.v1.funnel.routers import funnel_router
 
 
 app = FastAPI(

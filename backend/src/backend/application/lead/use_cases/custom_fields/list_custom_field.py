@@ -1,8 +1,8 @@
 from dataclasses import dataclass
 
-from src.backend.application.shared.interfaces.uow import UnitOfWork
-from src.backend.domain.lead.entity import LeadCustomField
-from src.backend.domain.user.entity import User
+from backend.src.backend.application.shared.interfaces.uow import UnitOfWork
+from backend.src.backend.domain.lead.entity import LeadCustomField
+
 
 
 @dataclass

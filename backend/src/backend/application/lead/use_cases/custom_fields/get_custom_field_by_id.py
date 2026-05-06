@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 
-from src.backend.application.lead.dtos.custom_fields.get_custom_field_by_id import GetCustomFieldByIdCommand
-from src.backend.application.shared.interfaces.uow import UnitOfWork
+from backend.src.backend.application.lead.dtos.custom_fields.get_custom_field_by_id import GetCustomFieldByIdCommand
+from backend.src.backend.application.shared.interfaces.uow import UnitOfWork
 
 
 @dataclass

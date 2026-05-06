@@ -1,7 +1,7 @@
 import re
 from dataclasses import dataclass
 
-from src.backend.domain.shared.value_objects.phone.errors import InvalidPhoneFormatError
+from backend.src.backend.domain.shared.value_objects.phone.errors import InvalidPhoneFormatError
 
 
 @dataclass(frozen=True)

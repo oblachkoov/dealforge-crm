@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-from src.backend.domain.lead.value_objects.lead_name.errors import UnSupportedLeadNameTypeError, \
+from backend.src.backend.domain.lead.value_objects.lead_name.errors import UnSupportedLeadNameTypeError, \
     InvalidLeadNameLengthError
 
 

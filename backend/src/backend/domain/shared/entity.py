@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-from src.backend.domain.shared.mixins import IDMixin
+from backend.src.backend.domain.shared.mixins import IDMixin
 
 @dataclass
 class BaseEntity(IDMixin):

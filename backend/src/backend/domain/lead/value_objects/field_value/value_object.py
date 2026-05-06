@@ -2,7 +2,7 @@ from dataclasses import dataclass
 from datetime import date
 from uuid import UUID
 
-from src.backend.domain.lead.value_objects.field_value.errors import EmptyFieldValueError, MultipleFieldValueError
+from backend.src.backend.domain.lead.value_objects.field_value.errors import EmptyFieldValueError, MultipleFieldValueError
 
 
 @dataclass(frozen=True)

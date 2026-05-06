@@ -1,10 +1,10 @@
 from dataclasses import dataclass
 
-from src.backend.application.lead.dtos.custom_fields.remove_enum_value import RemoveEnumValueCommand
-from src.backend.application.shared.interfaces.uow import UnitOfWork
-from src.backend.domain.lead.entity import LeadCustomField
-from src.backend.domain.lead.policies.can_remove_enum_value import CanRemoveEnumValuePolicy
-from src.backend.domain.user.entity import User
+from backend.src.backend.application.lead.dtos.custom_fields.remove_enum_value import RemoveEnumValueCommand
+from backend.src.backend.application.shared.interfaces.uow import UnitOfWork
+from backend.src.backend.domain.lead.entity import LeadCustomField
+from backend.src.backend.domain.lead.policies.can_remove_enum_value import CanRemoveEnumValuePolicy
+from backend.src.backend.domain.user.entity import User
 
 
 @dataclass
