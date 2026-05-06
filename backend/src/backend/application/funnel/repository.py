@@ -3,7 +3,7 @@ from uuid import UUID
 
 from backend.src.backend.application.funnel.dtos.list_funnel import ListFunnelCommand
 from backend.src.backend.application.shared.dtos.paginaton import PageResult
-from backend.src.backend.domain.funnel.entity import Funnel
+from backend.src.backend.domain.funnel.entity import Funnel, FunnelStage
 
 
 class FunnelRepository(Protocol):
@@ -16,3 +16,17 @@ class FunnelRepository(Protocol):
     async def get_funnel_by_id_funnel(self, funnel_id: UUID) -> Funnel | None: ...
 
     async def get_funnels(self, cmd: ListFunnelCommand) -> PageResult[Funnel]: ...
+
+
+class FunnelStageRepository(Protocol):
+    async def create_funnel_stage(self, stage: FunnelStage) -> FunnelStage: ...
+
+    async def update_funnel_stage(self, stage: FunnelStage) -> FunnelStage: ...
+
+    async def delete_funnel_stage(self, stage: FunnelStage) -> None: ...
+
+    async def get_funnel_stage_by_id(self, stage_id: UUID) -> FunnelStage: ...
+
+    async def get_funnel_stages(self, funnel_id: UUID) -> list[FunnelStage]: ...
+
+    async def save_all(self, stages: list[FunnelStage]) -> None: ...

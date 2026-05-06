@@ -1,4 +1,4 @@
-from src.backend.application.shared.errors import ApplicationError, NotFoundError
+from backend.src.backend.application.shared.errors import ApplicationError, NotFoundError
 
 
 class FunnelError(ApplicationError):

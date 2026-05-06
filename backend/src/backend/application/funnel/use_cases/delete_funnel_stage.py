@@ -1,11 +1,10 @@
 from dataclasses import dataclass
 
-from src.backend.application.funnel.services.stage_ordering import FunnelStageOrderingService
-from src.backend.application.shared.interfaces.uow import UnitOfWork
-from src.backend.domain.funnel.entity import Funnel, FunnelStage
-from src.backend.domain.funnel.policies.can_delete import CanDeleteFunnelPolicy
-from src.backend.domain.user.entity import User
-from tests.unit.domain.funnel.test_entity import funnel_id
+from backend.src.backend.application.funnel.services.stage_ordering import FunnelStageOrderingService
+from backend.src.backend.application.shared.interfaces.uow import UnitOfWork
+from backend.src.backend.domain.funnel.entity import Funnel, FunnelStage
+from backend.src.backend.domain.funnel.policies.can_delete import CanDeleteFunnelPolicy
+from backend.src.backend.domain.user.entity import User
 
 
 @dataclass

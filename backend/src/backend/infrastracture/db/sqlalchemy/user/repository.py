@@ -1,6 +1,5 @@
 from uuid import UUID
 
-from ansible_collections.community.general.plugins.modules.one_vm import resume_vm
 from sqlalchemy import select, exists
 from sqlalchemy.ext.asyncio import AsyncSession
 

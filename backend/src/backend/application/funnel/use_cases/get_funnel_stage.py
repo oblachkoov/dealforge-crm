@@ -1,8 +1,8 @@
 from dataclasses import dataclass
 
-from src.backend.application.funnel.dtos.get_funnel_stage import GetFunnelStageCommand
-from src.backend.application.shared.interfaces.uow import UnitOfWork
-from src.backend.domain.funnel.entity import Funnel
+from backend.src.backend.application.funnel.dtos.get_funnel_stage import GetFunnelStageCommand
+from backend.src.backend.application.shared.interfaces.uow import UnitOfWork
+from backend.src.backend.domain.funnel.entity import Funnel
 
 
 @dataclass

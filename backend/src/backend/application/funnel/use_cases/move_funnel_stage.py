@@ -1,9 +1,9 @@
 from dataclasses import dataclass
 
-from src.backend.application.funnel.dtos.move_funnel_stage import MoveFunnelStageCommand
-from src.backend.application.funnel.services.stage_ordering import FunnelStageOrderingService
-from src.backend.application.shared.interfaces.uow import UnitOfWork
-from src.backend.domain.funnel.entity import Funnel, FunnelStage
+from backend.src.backend.application.funnel.dtos.move_funnel_stage import MoveFunnelStageCommand
+from backend.src.backend.application.funnel.services.stage_ordering import FunnelStageOrderingService
+from backend.src.backend.application.shared.interfaces.uow import UnitOfWork
+from backend.src.backend.domain.funnel.entity import FunnelStage, Funnel
 
 
 @dataclass

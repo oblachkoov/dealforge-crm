@@ -1,4 +1,4 @@
-from src.backend.domain.funnel.entity import FunnelStage
+from backend.src.backend.domain.funnel.entity import FunnelStage
 
 
 class FunnelStageOrderingService:

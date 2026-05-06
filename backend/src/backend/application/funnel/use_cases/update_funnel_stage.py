@@ -1,10 +1,10 @@
 from dataclasses import dataclass
 
-from src.backend.application.funnel.dtos.update_funnel_stage import UpdateFunnelStageCommand
-from src.backend.application.shared.interfaces.uow import UnitOfWork
-from src.backend.domain.funnel.entity import Funnel, FunnelStage
-from src.backend.domain.funnel.policies.can_update import CanUpdateFunnelPolicy
-from src.backend.domain.user.entity import User
+from backend.src.backend.application.funnel.dtos.update_funnel_stage import UpdateFunnelStageCommand
+from backend.src.backend.application.shared.interfaces.uow import UnitOfWork
+from backend.src.backend.domain.funnel.entity import Funnel, FunnelStage
+from backend.src.backend.domain.funnel.policies.can_update import CanUpdateFunnelPolicy
+from backend.src.backend.domain.user.entity import User
 
 
 @dataclass
