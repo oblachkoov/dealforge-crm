@@ -2,16 +2,16 @@ from uuid import UUID
 
 from fastapi import Depends
 
-from src.backend.application.funnel.dtos.get_funnel import GetFunnelCommand
-from src.backend.application.funnel.dtos.get_funnel_stage import GetFunnelStageCommand
-from src.backend.application.funnel.services.stage_ordering import FunnelStageOrderingService
-from src.backend.application.funnel.use_cases.get_funnel import GetFunnelUseCase
-from src.backend.application.funnel.use_cases.get_funnel_stage import GetFunnelStageUseCase
-from src.backend.domain.funnel.entity import Funnel
-from src.backend.domain.user.entity import User
-from src.backend.infrastracture.db.sqlalchemy.core.uow import SqlAlchemyUnitOfWork
-from src.backend.presentation.api.v1.auth.dependencies import get_current_user
-from src.backend.presentation.api.v1.core.dependencies import get_uow
+from backend.src.backend.application.funnel.dtos.get_funnel import GetFunnelCommand
+from backend.src.backend.application.funnel.dtos.get_funnel_stage import GetFunnelStageCommand
+from backend.src.backend.application.funnel.services.stage_ordering import FunnelStageOrderingService
+from backend.src.backend.application.funnel.use_cases.get_funnel import GetFunnelUseCase
+from backend.src.backend.application.funnel.use_cases.get_funnel_stage import GetFunnelStageUseCase
+from backend.src.backend.domain.funnel.entity import Funnel
+from backend.src.backend.domain.user.entity import User
+from backend.src.backend.infrastracture.db.sqlalchemy.core.uow import SqlAlchemyUnitOfWork
+from backend.src.backend.presentation.api.v1.auth.dependencies import get_current_user
+from backend.src.backend.presentation.api.v1.core.dependencies import get_uow
 
 
 async def get_funnel(
